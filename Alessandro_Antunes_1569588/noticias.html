@@ -24,9 +24,17 @@
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
-        background-color: #f4f4f4;
+        background-image: url("assets/img/fundo.png");
+        background-size: cover;
+  background-color: rgba(255, 255, 255, 0.3); /* cor semi-transparente */
+  backdrop-filter: blur(8px);                /* aplica o blur */
+  -webkit-backdrop-filter: blur(20px);        /* compatibilidade com Safari */
+  border-radius: 10px;
+
       }
-  
+      .navbar {
+        background-color: #121314;
+      }
 .navbar-brand img {
     width: 8rem;
     height: auto;
@@ -56,6 +64,7 @@
         background-color: white;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        background-color: rgba(255, 255, 255, 0.767); /* cor semi-transparente */
       }
       
   
@@ -70,25 +79,22 @@
       .noticia h2 {
         font-size: 3rem;
         margin-bottom: 10px;
-        color: #8b5e3b;
+        color: #000000;
       }
   
       .noticia p {
         margin-bottom: 1rem;
         font-size: 2.1rem;
+        color: #000000;
       }
   
       .pagination {
         position: relative;
         left: 45% ; }
       footer {
-  background-color: #f90000; /* Cor de fundo clara, semelhante ao fundo do seu site */
+  background-color: #121314; /* Cor de fundo clara, semelhante ao fundo do seu site */
   color: #343a40; /* Texto escuro para contraste */
   padding: 2rem 0;
-}
-.bg-dark {
-    --bs-bg-opacity: 1;
-    background-color:#5c3b1e;
 }
 footer .container {
   max-width: 1100px;
@@ -108,13 +114,17 @@ footer .col-md-6 {
 }
 
 footer h5 {
-  font-size: 1.1rem;
+  position: relative;
+  right:60%;
+  font-size: 3.1rem;
   margin-bottom: 1rem;
-  color: #956b00; /* Azul como título para destacar */
+  color: #ffffff; /* Azul como título para destacar */
 }
 
 footer p {
   font-size: 0.9rem;
+  position: relative;
+  right:60%;
 }
 
 footer .btn {
@@ -200,30 +210,62 @@ footer .text-center .btn {
       @media (max-width: 425px) {
         .pagination { position: relative;
           border:20px solid red ;
-        left: 30% ; }
-      }
+        left: 20% ;
+        margin-right: 170px; }
+
+        footer h5 {
+  position: relative;
+  right:0%;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Azul como título para destacar */
+}}
+
+footer p {
+  font-size: 0.9rem;
+  position: relative;
+  right:0%;
+}
+      
       html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+.d-flex {
+  position: relative;
+  left :25%
+}
+.navbar-brand {
+  font-size: 35px;
+}
+.navbar-brand:hover a {
+  color:#000000;
+  transition: 1s;
+}
+.btn {
+  background-color: #4e4e4e50;
+}
     </style>
   </head>
   <body>
   
-    <header>
-      <nav  class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="">
-          </a>
-          <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); redirecionarBusca();">
-            <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
-            <button class="btn btn-primary" type="submit">🔍</button>
-          </form>
+    <nav class="navbar navbar-expand-lg" style="background-color: #121314;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <a class="navbar-brand text-white" href="index.html"  > Lê Noticias </a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarConteudo">
+           
+          <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); buscarNoticias();">
+              <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
+              <button class="btn" type="submit">🔍</button>
+            </form>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   
     <main class="container">
       <div class="noticia">
@@ -248,7 +290,7 @@ footer .text-center .btn {
       </ul>
     </nav>
   
-    <footer class="py-5 bg-dark text-white">
+    <footer class="py-5  text-white">
       <section class="container my-2">
         <div class="row">
           <div class="col-md-6">

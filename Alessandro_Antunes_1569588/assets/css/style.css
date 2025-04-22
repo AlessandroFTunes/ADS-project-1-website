@@ -17,7 +17,7 @@ body {
 
 /* BARRA DE NAVEGAÇÃO */
 .nav-bar {
-    background-color: #D2B48C;
+    background-color: #343a40;         /* azul escuro */
     width: 100%;
     padding: 1rem;
     position: fixed;
@@ -25,8 +25,10 @@ body {
     left: 0;
     z-index: 100;
     text-decoration: none;
-    border-bottom: 2px solid #8B4513;
+    border-bottom: 2px solid #ffffff;  /* linha branca para contraste */
+    color: #ffffff;                    /* texto branco */
 }
+
 
 .logo {
     width: 12.5rem;

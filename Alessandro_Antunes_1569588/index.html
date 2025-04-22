@@ -21,38 +21,44 @@
     
   </script>
   <style>
-    body {
-      background-color: #f4e1c1;
-      color: #5c3b1e;
-    }
-    header,
-    footer {
-      background-color: #8b5e3b;
-      color: white;
-    }
-    .nav-link {
-      color: #d4a373 ;
-    }
-    .nav-link.active {
-     
-      color: white ;
-    }
-    .btn-primary {
-      background-color: #ffffff;
-      border: none;
-    }
-    .btn-outline-primary {
-      border-color: #ffffff;
-      color: #ffffff;
-    }
-    .btn-outline-primary:hover {
-      background-color: #58340d;
-      color: white;
-    }
-    img {
-      object-fit: cover;
+   body {
+  background-color: #343a40; /* Azul bem escuro */
+  color: #ffffff;            /* Texto branco */
+}
 
-    }
+header,
+footer {
+  background-color: #000000; /* Preto para header e footer */
+  color: white;
+}
+
+.nav-link {
+  color: #ffffff;            /* Links em branco */
+}
+
+.nav-link.active {
+  color: #d2b48c;            /* Cor de destaque (bege ou cor suave) */
+}
+
+.btn-primary {
+  background-color: #ffffff; /* Botões brancos */
+  border: none;
+  color: #343a40;            /* Texto em azul escuro */
+}
+
+.btn-outline-primary {
+  border-color: #ffffff;    /* Bordas brancas */
+  color: #ffffff;            /* Texto branco */
+}
+
+.btn-outline-primary:hover {
+  background-color: #343a40; /* Fundo azul escuro ao passar o mouse */
+  color: white;
+}
+
+img {
+  object-fit: cover;         /* Ajuste da imagem */
+}
     .carousel-inner img {
   height: 18.75rem; 
   object-fit: cover;
@@ -73,18 +79,19 @@
   color :#fff;
 }
 .card {
-  background-color: #f4e1c1; /* Cor de fundo dos cards */
-  color: #5c3b1e;            /* Cor do texto */
+  background-color: #101214b3; /* Azul escuro com transparência */
+  color: #ffffff;              /* Cor do texto branco */
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Sombra mais forte para contraste */
 }
+
 .card img {
  width: 20rem;
  height: auto;
 }
 .card-title {
-  color: #8b5e3b;
+  color: #ffffff;
 }
 .navbar-brand img {
     width: 8rem;
@@ -106,7 +113,7 @@
 .nav-item:hover {
     font-size: 35px;
     transition: 1.0s;
-    color: wheat;
+    color: rgb(255, 255, 255);
   }
 
   footer {
@@ -195,15 +202,33 @@ footer .col-md-6:last-child {
 footer .text-center .btn {
   margin-bottom: 0.5rem;
 }
-
-
+.card-title:hover {
+  color:#686868;
+  transition: 0.5s;
+}
+.card-img-top:hover {
+  width: 22rem;
+  transition: 0.5s;
+}
+.d-flex {
+  position: relative;
+  left :25%
+}
+.navbar-brand {
+  font-size: 35px;
+}
+.navbar-brand:hover a {
+  color:#000000;
+  transition: 1s;
+}
 
   </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #8b5e3b;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #121314;">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#"><img src="assets/img/logo.png" alt=""></a>
+      <a class="navbar-brand text-white" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+      <a class="navbar-brand text-white" href="index.html"  > Lê Noticias </a>
       <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
