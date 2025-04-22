@@ -16,6 +16,8 @@
 
  <!-- JS Personalizado -->
  <script src="Alessandro_Antunes_1569588/assets/js/app.js" defer></script>
+ <!-- Ícones de redes sociais (Bootstrap Icons) -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
   </script>
   <style>
@@ -108,14 +110,93 @@
   }
 
   footer {
-  position: relative;
+  background-color: #f8f9fa; /* Cor de fundo clara, semelhante ao fundo do seu site */
+  color: #343a40; /* Texto escuro para contraste */
+  padding: 2rem 0;
 }
 
-.img-footer {
-  position: relative;
-  top: 00px;
-  left: 50%;
-  transform: translateX(-50%); }
+footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .col-md-6 {
+  flex: 1 1 48%;
+  margin-bottom: 1rem;
+}
+
+footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #007bff; /* Azul como título para destacar */
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer .btn {
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+}
+
+footer .btn-outline-primary {
+  border-radius: 25px;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+footer .btn-outline-primary:hover {
+  background-color: #956b00;
+  color: #fff;
+}
+
+footer .img-footer {
+  max-width: 100px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .d-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .text-center p {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #6c757d; /* Cor mais suave para o texto de copyright */
+}
+
+footer .my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .text-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer .col-md-6:last-child {
+  text-align: center;
+}
+
+footer .text-center .btn {
+  margin-bottom: 0.5rem;
+}
+
+
 
   </style>
 </head>
@@ -127,20 +208,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarConteudo">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Principais noticias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Saúde</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Prefeitura</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Futebol</a>
-          </li>
-        </ul>
+         
         <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); buscarNoticias();">
             <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
             <button class="btn btn-primary" type="submit">🔍</button>
@@ -196,116 +264,178 @@
   </button>
 </div>
 
-<!-- Seção de Notícias -->
-<section id="noticias" class="row g-4">
-  <!-- Notícia 1 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=1">
-        <img src="assets/img/noticia.png" class="card-img-top" alt="Granizo">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=1" class="text-decoration-none text-reset">Chuva de granizo!</a></h5>
-        <p class="card-text">Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!</p>
+
+
+
+
+    <!-- Seção de Notícias -->
+    <section id="noticias" class="row g-4 mt-4">
+      <!-- Notícia 1 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="Chuva de granizo!" data-content="Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!">
+          <a href="noticias.html?id=1">
+            <img src="assets/img/noticia.png" class="card-img-top" alt="Granizo">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=1" class="text-decoration-none text-reset">Chuva de granizo!</a></h5>
+            <p class="card-text">Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Notícia 2 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=2">
-        <img src="assets/img/noticia2.png" class="card-img-top" alt="Temporal no Barreiro">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=2" class="text-decoration-none text-reset">Temporal causa estragos em Belo Horizonte</a></h5>
-        <p class="card-text">Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.</p>
+      <!-- Notícia 2 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="Temporal causa estragos em Belo Horizonte" data-content="Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.">
+          <a href="noticias.html?id=2">
+            <img src="assets/img/noticia2.png" class="card-img-top" alt="Temporal no Barreiro">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=2" class="text-decoration-none text-reset">Temporal causa estragos em Belo Horizonte</a></h5>
+            <p class="card-text">Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Notícia 3 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=3">
-        <img src="assets/img/noticia4.png" class="card-img-top" alt="Estácio Barreiro">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=3" class="text-decoration-none text-reset">Estácio chega no Via Shopping</a></h5>
-        <p class="card-text">A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Notícia 4 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=4">
-        <img src="assets/img/noticia3.png" class="card-img-top" alt="UPA Barreiro">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=4" class="text-decoration-none text-reset">BH quer ampliar atendimentos nas UPAs</a></h5>
-        <p class="card-text">A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Notícia 5 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=5">
-        <img src="assets/img/noticia6.png" class="card-img-top" alt="CEMIG redes elétricas">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=5" class="text-decoration-none text-reset">CEMIG reforça redes elétricas</a></h5>
-        <p class="card-text">A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Notícia 6 -->
-  <div class="col-md-6">
-    <div class="card">
-      <a href="noticias.html?id=6">
-        <img src="assets/img/noticia7.png" class="card-img-top" alt="Ônibus elétrico Barreiro">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title"><a href="noticias.html?id=6" class="text-decoration-none text-reset">Ônibus elétrico chega ao Barreiro</a></h5>
-        <p class="card-text">A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
       
 
-  
-
-<footer class=" py-3 border-top">
-    <!-- Informações do Aluno -->
-    <section class="my-4">
-      <h5>Informações do Aluno</h5>
-      <p><strong>Sobre:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-      <p class="text-center" ><strong>Autoria:</strong> Alessandro Antunes - RA: 1569588</p>
-      
-      <!-- Redes Sociais -->
-      <div class="d-flex flex-wrap justify-content-center gap-3 my-3">
-        <a href="#" class="btn btn-outline-primary">Instagram</a>
-        <a href="#" class="btn btn-outline-primary">Facebook</a>
-        <a href="#" class="btn btn-outline-primary">YouTube</a>
-        <a href="#" class="btn btn-outline-primary">Twitter</a>
-        <a href="#" class="btn btn-outline-primary">TikTok</a>
+      <!-- Notícia 3 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="Estácio chega no Via Shopping" data-content="A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.">
+          <a href="noticias.html?id=3">
+            <img src="assets/img/noticia4.png" class="card-img-top" alt="Estácio Barreiro">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=3" class="text-decoration-none text-reset">Estácio chega no Via Shopping</a></h5>
+            <p class="card-text">A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.</p>
+          </div>
+        </div>
       </div>
-  
-      <!-- Imagem representativa -->
-      <img src="assets/img/aluno.png" alt="Imagem do aluno" class="img-footer rounded-circle" style="max-width: 150px;">
 
-      
-      
+      <!-- Notícia 4 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="BH quer ampliar atendimentos nas UPAs" data-content="A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.">
+          <a href="noticias.html?id=4">
+            <img src="assets/img/noticia3.png" class="card-img-top" alt="UPA Barreiro">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=4" class="text-decoration-none text-reset">BH quer ampliar atendimentos nas UPAs</a></h5>
+            <p class="card-text">A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notícia 5 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="CEMIG reforça redes elétricas" data-content="A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.">
+          <a href="noticias.html?id=5">
+            <img src="assets/img/noticia6.png" class="card-img-top" alt="CEMIG redes elétricas">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=5" class="text-decoration-none text-reset">CEMIG reforça redes elétricas</a></h5>
+            <p class="card-text">A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notícia 6 -->
+      <div class="col-md-6">
+        <div class="card noticia" data-title="Ônibus elétrico chega ao Barreiro" data-content="A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.">
+          <a href="noticias.html?id=6">
+            <img src="assets/img/noticia7.png" class="card-img-top" alt="Ônibus elétrico Barreiro">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="noticias.html?id=6" class="text-decoration-none text-reset">Ônibus elétrico chega ao Barreiro</a></h5>
+            <p class="card-text">A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <p>© 2025 Lê Notícias - Todos os direitos reservados.</p>
-  </footer>
+  </div>
+
+  <!-- Script de Busca -->
+  <script>
+    function removerAcentos(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function buscarNoticias() {
+    
+      const termo = removerAcentos(document.getElementById('campoBusca').value.toLowerCase());
+      const noticias = document.querySelectorAll('.noticia');
+
+      noticias.forEach(noticia => {
+        const titulo = removerAcentos(noticia.getAttribute('data-title').toLowerCase());
+        const conteudo = removerAcentos(noticia.getAttribute('data-content').toLowerCase());
+document.getElementById('campoBusca').value = '';
+        if (titulo.includes(termo) || conteudo.includes(termo)) {
+          noticia.style.display = 'block';
+        } else {
+          noticia.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+
+
+      
+
+  
+
+<footer class="py-5 bg-dark text-white">
+  <section class="container my-2">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="mb-3">Informações do Aluno</h5>
+        <p><strong>Sobre:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+        <p><strong>Curso:</strong> Analise e desenvolvimento de Sistema</p>
+        <p><strong>Autoria:</strong> Alessandro Antunes - RA: 1569588</p>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img src="assets/img/aluno.png" alt="Imagem do aluno" class="img-footer">
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-instagram"></i> Instagram</a>
+          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-facebook"></i> Facebook</a>
+          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-youtube"></i> YouTube</a>
+          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-twitter"></i> Twitter</a>
+          <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-tiktok"></i> TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <p>© 2025 Lê Notícias - Todos os direitos reservados.</p>
+    </div>
+  </section>
+</footer>
+
+ 
+  <script>
+    function removerAcentos(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+  
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const termo = urlParams.get('busca');
+  
+      if (termo) {
+        const termoNormalizado = removerAcentos(termo.toLowerCase());
+        const noticias = document.querySelectorAll('.noticia');
+  
+        noticias.forEach(noticia => {
+          const titulo = removerAcentos(noticia.getAttribute('data-title').toLowerCase());
+          const conteudo = removerAcentos(noticia.getAttribute('data-content').toLowerCase());
+  
+          if (titulo.includes(termoNormalizado) || conteudo.includes(termoNormalizado)) {
+            noticia.style.display = 'block';
+          } else {
+            noticia.style.display = 'none';
+          }
+        });
+      }
+    };
+  </script>
   
 </body>
 </html>
