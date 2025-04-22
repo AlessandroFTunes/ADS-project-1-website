@@ -1,0 +1,337 @@
+/* RESET GERAL */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #F5E7D6;
+    color: #3A2C1A;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.nav-bar {
+    background-color: #D2B48C;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-decoration: none;
+    border-bottom: 2px solid #8B4513;
+}
+
+.logo {
+    width: 12.5rem;
+    position: relative;
+    top: -1.875rem;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.cadastro {
+    text-decoration: none;
+    position: absolute;
+    right: 6.25rem;
+    top: 0;
+    width: 8.125rem;
+    color: #3A2C1A;
+    font-weight: bold;
+}
+
+.nav-bar2 {
+    margin: 8rem auto;
+    border: 1px solid #A67C52;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    transition: 1s;
+    background-color: #E1C9A6;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+}
+
+.nav-bar2 a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: #5C3A21;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+    left: 22rem;
+}
+
+.nav-bar2 a:hover {
+    background-color: #8B4513;
+    color: #F5E7D6;
+}
+
+.nav-bar2 a:not(:last-child) {
+    margin-right: 14rem;
+}
+
+.nav-bar2:hover {
+    background-color: #A67C52;
+}
+
+/* BARRA DE PESQUISA */
+.barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10.625rem;
+}
+
+.barra input {
+    padding: 1.25rem;
+    width: 60%;
+    font-size: 1rem;
+    border: 0.0625rem solid #8B4513;
+    border-radius: 0.25rem;
+    background-color: #E1C9A6;
+    color: #3A2C1A;
+}
+
+.barra button {
+    padding: 1rem;
+    background-color: #A67C52;
+    color: #F5E7D6;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-left: 0.625rem;
+    transition: 0.3s;
+}
+
+.barra button:hover {
+    background-color: #5C3A21;
+}
+
+/* CARROSSEL */
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -8.5rem;
+    left: -0.5rem;
+    border-radius: 15px;
+}
+
+.slides {
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slides {
+    width: 14rem;
+    position: relative;
+}
+
+.slides img {
+    width: 800px;
+    height: 250px;
+    position: absolute;
+    left: -20rem;
+    top: 9rem;
+    border: 10px solid #E1C9A6;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 400px;
+    margin-top: 20.5rem;
+    margin-left: -1.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 1px solid #F5E7D6;
+    padding: 6.5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    background-color: rgba(139, 69, 19, 0.3);
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 74px;
+}
+
+.manual-btn:hover {
+    background-color: #8B4513;
+}
+
+/* SEÇÃO DE NOTÍCIAS */
+.noticias {
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    left: -5px;
+    width: 450%;
+    max-width: 600px;
+}
+
+.noticias img {
+    width: 45rem;
+    height: auto;
+    border: 5px solid #D2B48C;
+    border-radius: 10px;
+}
+
+.texto-noticias {
+    font-size: 1.5rem;
+    margin: 0.625rem;
+    padding: 0.625rem;
+    border: 1px solid #A67C52;
+    background-color: #E1C9A6;
+    color: #3A2C1A;
+    border-radius: 8px;
+}
+
+.img-noticias {
+    width: 15rem;
+    height: auto;
+}
+
+.noticias-g {
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    max-width: 25rem;
+    top: 48rem;
+    border: 2rem solid #E1C9A6;
+    text-decoration: none;
+    background-color: #D2B48C;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.noticias-g img {
+    width: 250px;
+    border: 3px solid #A67C52;
+    border-radius: 8px;
+}
+
+.noticias-g p {
+    color: #3A2C1A;
+    background-color: #E1C9A6;
+    position: relative;
+    left: 2.9;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.noticias-g p:hover {
+    color: #F5E7D6;
+    background-color: #5C3A21;
+    font-size: 2.5rem;
+}
+
+.noticias-g img:hover {
+    width: 500px;
+    transition: 1s;
+    border-color: #8B4513;
+}
+
+.noticias-g:hover {
+    background-color: #5C3A21;
+    color: #F5E7D6;
+    transition: 1s;
+}
+
+/* REDES SOCIAIS */
+.social {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin: 1.5rem auto;
+    width: 200%;
+    max-width: 20rem;
+    left: 40rem;
+    top: -14rem;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #F5E7D6;
+    background: #8B4513;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+    width: 15rem;
+    height: 10rem;
+    justify-content: center;
+    border: 2px solid #5C3A21;
+}
+
+.social a img {
+    width: 3.85rem;
+    height: auto;
+    margin-right: 2.375rem;
+    filter: brightness(0) invert(1);
+}
+
+.social a:hover {
+    background: #5C3A21;
+    transform: scale(1.05);
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    margin: 1px;
+}
+
+/* FOOTER */
+footer {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #5C3A21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5E7D6;
+    width: 100%;
+    border-top: 3px solid #8B4513;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer article {
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* MEDIA QUERIES ... */

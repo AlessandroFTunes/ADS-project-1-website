@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notícia Detalhada - Chuva de Granizo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"> </script>
+
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Notícia</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+  
+      .navbar-brand img {
+    width: 8rem;
+    height: auto;
+}
+.navbar-brand img:hover {
+    width: 19rem;
+    height: auto;
+    transition: 1s;
+    
+}
+.nav-item {
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.nav-item:hover {
+    font-size: 35px;
+    transition: 1.0s;
+    color: wheat;
+  }
+      main.container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      }
+  
+      .noticia img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+  
+      .noticia h2 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #8b5e3b;
+      }
+  
+      .noticia p {
+        margin-bottom: 1rem;
+        font-size: 2.1rem;
+      }
+  
+      footer {
+        background-color: #8b5e3b;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 20rem;
+      }
+  
+      /* Responsivo */
+      @media (max-width: 768px) {
+        .navbar .container {
+          flex-direction: column;
+          align-items: flex-start;
+          
+        }
+        .navbar {
+          height: 100%;
+        }
+  
+        .nav-links {
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+        }
+  
+        .noticia h2 {
+          font-size: 2.5rem;
+        }
+  
+        .noticia p {
+          font-size: 1rem;
+        }
+      }
+
+      html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body > main {
+  flex: 1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.page-link:hover {
+  background-color: #8b5e3b;
+  color: white;
+  border-color: #8b5e3b;
+}
+
+.page-item.active .page-link {
+  background-color: #8b5e3b;
+  color: white;
+  border-color: #8b5e3b;
+}
+
+.page-item.disabled .page-link {
+  color: #aaa;
+  background-color: #eaeaea;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+    </style>
+  </head>
+  <body>
+  
+    <header>
+      <nav class="navbar">
+        <nav class="navbar navbar-expand-lg" style="background-color: #8b5e3b;">
+          <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Alternar navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarConteudo">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Principais noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Saúde</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Prefeitura</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Futebol</a>
+                </li>
+              </ul>
+              <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); buscarNoticias();">
+                  <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
+                  <button class="btn btn-primary" type="submit">🔍</button>
+                </form>
+            </div>
+          </div>
+        </nav>
+    </header>
+  
+    <main class="container">
+      <div class="noticia">
+        <img id="imagem" src="" alt="Imagem da notícia">
+        <h2 id="titulo">Carregando...</h2>
+        <p id="conteudo">Aguarde enquanto carregamos a notícia...</p>
+        <p ><b id="autor"> </b></p>
+      </div>
+    </main>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination" id="pagination">
+        <li  class="page-item"><a href="noticias.html?id=1" class="page-link"> 1</a></li>
+        <li class="page-item"><a href="noticias.html?id=2"  class="page-link" >2</a></li>
+        <li class="page-item"><a href="noticias.html?id=3"  class="page-link" >3</a></li>
+        <li  class="page-item"><a href="noticias.html?id=4" class="page-link">4</a></li>
+        <li class="page-item"><a href="noticias.html?id=5"  class="page-link" >5</a></li>
+        <li class="page-item"><a href="noticias.html?id=6"  class="page-link" >6</a></li>
+      </ul>
+    </nav>
+  
+    <footer>
+      <p>&copy; 2025 - Portal de Notícias</p>
+    </footer>
+  
+  </body>
+  </html>
+  
+  <script src="app.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    const noticia = noticias.find(n => n.id === id);
+
+    if (noticia) {
+      document.getElementById("titulo").innerText = noticia.titulo;
+      document.getElementById("conteudo").innerText = noticia.conteudo;
+      document.getElementById("autor").innerText = noticia.autor;
+      document.getElementById("imagem").src = noticia.imagem;
+      
+    } else {
+      document.getElementById("titulo").innerText = "Notícia não encontrada";
+      document.getElementById("conteudo").innerText = "A notícia solicitada não está disponível.";
+      document.getElementById("imagem").style.display = "none";
+    }
+  </script>
+</body>
+</html>
