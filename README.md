@@ -38,6 +38,6 @@ LêNoticias/ │ ├── assets/ │ ├── img/ # Imagens do site (logo, i
 1. **Clone o repositório**:
 
    ```bash
-   git clone (https://github.com/AlessandroFTunes/ADS-project-1-website)
+   git clone https://github.com/AlessandroFTunes/ADS-project-1-website
 
 
