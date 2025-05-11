@@ -19,7 +19,7 @@
  <!-- Ícones de redes sociais (Bootstrap Icons) -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
-  </script>
+
   <style>
    body {
   background-color: #343a40; /* Azul bem escuro */
@@ -226,21 +226,23 @@ footer .text-center .btn {
 </head>
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #121314;">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white" href="index.html"><img src="assets/img/logo.png" alt=""></a>
-      <a class="navbar-brand text-white" href="index.html"  > Lê Noticias </a>
-      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarConteudo">
-         
-        <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); buscarNoticias();">
-            <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
-            <button class="btn btn-primary" type="submit">🔍</button>
-          </form>
-      </div>
-    </div>
-  </nav>
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+          <a class="navbar-brand text-white" href="index.html"  > Lê Noticias </a>
+          <a class="navbar-brand text-white" href="login.html?id=1"><img src="assets/img/logo.png" alt=""></a>
+          <a href=""></a>
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo" aria-controls="navbarConteudo" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarConteudo">
+             
+            <form class="d-flex w-50" role="search" onsubmit="event.preventDefault(); buscarNoticias();">
+                <input id="campoBusca" class="form-control me-2" type="search" placeholder="Buscar notícias..." aria-label="Buscar">
+                <button class="btn btn-primary" type="submit">🔍</button>
+              </form>
+          </div>
+        </div>
+      </nav>
   
 
  <!-- Carrossel -->
@@ -294,86 +296,85 @@ footer .text-center .btn {
 
 
     <!-- Seção de Notícias -->
-    <section id="noticias" class="row g-4 mt-4">
-      <!-- Notícia 1 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="Chuva de granizo!" data-content="Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!">
-          <a href="noticias.html?id=1">
-            <img src="assets/img/noticia.png" class="card-img-top" alt="Granizo">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=1" class="text-decoration-none text-reset">Chuva de granizo!</a></h5>
-            <p class="card-text">Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!</p>
-          </div>
-        </div>
+<section id="noticias" class="row g-4 mt-4">
+  <!-- Notícia 1 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="Chuva de granizo!" data-content="Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!">
+      <a href="noticias.html?id=1" onclick="verificarLogin(event, 'noticias.html?id=1')">
+        <img src="assets/img/noticia.png" class="card-img-top" alt="Granizo">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=1" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=1')">Chuva de granizo!</a></h5>
+        <p class="card-text">Na tarde desta quinta-feira (20), a Defesa Civil mandou avisar: pode vir chuva de granizo por aí!</p>
       </div>
+    </div>
+  </div>
 
-      <!-- Notícia 2 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="Temporal causa estragos em Belo Horizonte" data-content="Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.">
-          <a href="noticias.html?id=2">
-            <img src="assets/img/noticia2.png" class="card-img-top" alt="Temporal no Barreiro">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=2" class="text-decoration-none text-reset">Temporal causa estragos em Belo Horizonte</a></h5>
-            <p class="card-text">Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.</p>
-          </div>
-        </div>
+  <!-- Notícia 2 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="Temporal causa estragos em Belo Horizonte" data-content="Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.">
+      <a href="noticias.html?id=2" onclick="verificarLogin(event, 'noticias.html?id=2')">
+        <img src="assets/img/noticia2.png" class="card-img-top" alt="Temporal no Barreiro">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=2" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=2')">Temporal causa estragos em Belo Horizonte</a></h5>
+        <p class="card-text">Um temporal danado caiu em Belo Horizonte e deixou rastro de bagunça na região do Barreiro.</p>
       </div>
-      
+    </div>
+  </div>
 
-      <!-- Notícia 3 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="Estácio chega no Via Shopping" data-content="A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.">
-          <a href="noticias.html?id=3">
-            <img src="assets/img/noticia4.png" class="card-img-top" alt="Estácio Barreiro">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=3" class="text-decoration-none text-reset">Estácio chega no Via Shopping</a></h5>
-            <p class="card-text">A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.</p>
-          </div>
-        </div>
+  <!-- Notícia 3 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="Estácio chega no Via Shopping" data-content="A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.">
+      <a href="noticias.html?id=3" onclick="verificarLogin(event, 'noticias.html?id=3')">
+        <img src="assets/img/noticia4.png" class="card-img-top" alt="Estácio Barreiro">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=3" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=3')">Estácio chega no Via Shopping</a></h5>
+        <p class="card-text">A faculdade Estácio inaugurou uma nova unidade dentro do Via Shopping Barreiro.</p>
       </div>
+    </div>
+  </div>
 
-      <!-- Notícia 4 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="BH quer ampliar atendimentos nas UPAs" data-content="A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.">
-          <a href="noticias.html?id=4">
-            <img src="assets/img/noticia3.png" class="card-img-top" alt="UPA Barreiro">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=4" class="text-decoration-none text-reset">BH quer ampliar atendimentos nas UPAs</a></h5>
-            <p class="card-text">A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.</p>
-          </div>
-        </div>
+  <!-- Notícia 4 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="BH quer ampliar atendimentos nas UPAs" data-content="A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.">
+      <a href="noticias.html?id=4" onclick="verificarLogin(event, 'noticias.html?id=4')">
+        <img src="assets/img/noticia3.png" class="card-img-top" alt="UPA Barreiro">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=4" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=4')">BH quer ampliar atendimentos nas UPAs</a></h5>
+        <p class="card-text">A previsão é de que ambas possam atender mais de 10 mil pessoas por mês.</p>
       </div>
+    </div>
+  </div>
 
-      <!-- Notícia 5 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="CEMIG reforça redes elétricas" data-content="A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.">
-          <a href="noticias.html?id=5">
-            <img src="assets/img/noticia6.png" class="card-img-top" alt="CEMIG redes elétricas">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=5" class="text-decoration-none text-reset">CEMIG reforça redes elétricas</a></h5>
-            <p class="card-text">A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.</p>
-          </div>
-        </div>
+  <!-- Notícia 5 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="CEMIG reforça redes elétricas" data-content="A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.">
+      <a href="noticias.html?id=5" id="myButton">
+        <img src="assets/img/noticia6.png" class="card-img-top" alt="CEMIG redes elétricas">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=5" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=5')">CEMIG reforça redes elétricas</a></h5>
+        <p class="card-text">A Cemig iniciou obras para melhorar o fornecimento de energia no Barreiro.</p>
       </div>
+    </div>
+  </div>
 
-      <!-- Notícia 6 -->
-      <div class="col-md-6">
-        <div class="card noticia" data-title="Ônibus elétrico chega ao Barreiro" data-content="A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.">
-          <a href="noticias.html?id=6">
-            <img src="assets/img/noticia7.png" class="card-img-top" alt="Ônibus elétrico Barreiro">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"><a href="noticias.html?id=6" class="text-decoration-none text-reset">Ônibus elétrico chega ao Barreiro</a></h5>
-            <p class="card-text">A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.</p>
-          </div>
-        </div>
+  <!-- Notícia 6 -->
+  <div class="col-md-6">
+    <div class="card noticia" data-title="Ônibus elétrico chega ao Barreiro" data-content="A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.">
+      <a href="noticias.html?id=6" onclick="verificarLogin(event, 'noticias.html?id=6')">
+        <img src="assets/img/noticia7.png" class="card-img-top" alt="Ônibus elétrico Barreiro">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><a href="noticias.html?id=6" class="text-decoration-none text-reset" onclick="verificarLogin(event, 'noticias.html?id=6')">Ônibus elétrico chega ao Barreiro</a></h5>
+        <p class="card-text">A linha 6350 agora tem ônibus elétrico: mais conforto, menos poluição.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </div>
 
   <!-- Script de Busca -->
@@ -433,7 +434,7 @@ document.getElementById('campoBusca').value = '';
     </div>
   </section>
 </footer>
-
+<script src="Alessandro_Antunes_1569588/assets/js/verificadores.js"></script>
  
   <script>
     function removerAcentos(texto) {
@@ -460,6 +461,8 @@ document.getElementById('campoBusca').value = '';
         });
       }
     };
+
+    
   </script>
   
 </body>

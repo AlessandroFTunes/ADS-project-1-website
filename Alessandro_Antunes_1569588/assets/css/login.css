@@ -1,0 +1,84 @@
+.form {
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    position: relative;
+    top: 100px;
+    left: 35%;
+    background-color: rgba(240, 248, 255, 0.296);
+    padding: 20px;
+    
+}
+
+#login {
+    position: relative;
+    left: 600px;
+}
+.mb-3 {
+    padding: 10px;
+}
+.btn1 {
+    display:flex ;
+    justify-content: center;
+    width: 30vh;
+    position:relative;
+    left: 4.8rem;
+
+}
+
+body {
+    background-image: url(../img/fundologin.png);
+    background-color: rgba(255, 255, 255, 0.596);
+    background-size: cover;             /* aplica o blur */
+    
+}
+img {
+    width: 10px;
+    height: auto;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+.form {
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    position: relative;
+    top: 68px;
+    left: 15%;
+    background-color: rgba(240, 248, 255, 0.296);
+    padding: 20px;
+}
+.btn1 {
+    display:flex ;
+    justify-content: center;
+    width: 20vh;
+    position:relative;
+    left: 1rem;
+
+}
+  h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.form {
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    position: relative;
+    top: 68px;
+    left: 25%;
+    background-color: rgba(240, 248, 255, 0.296);
+    padding: 20px;
+}
+.btn1 {
+    display:flex ;
+    justify-content: center;
+    width: 30vh;
+    position:relative;
+    left: 4.8rem;
+
+}
+}

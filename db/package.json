@@ -1,0 +1,16 @@
+{
+  "name": "ads-project-1-website",
+  "version": "1.0.0",
+  "description": "**Lê Notícias** é um portal de notícias locais focado em fornecer informações sobre eventos, condições climáticas e atualizações importantes da cidade de Belo Horizonte, especialmente na região do Barreiro. O site é desenvolvido com o uso de tecnologias como HTML, CSS, JavaScript, Bootstrap e recursos personalizados para uma experiência de usuário fluida e dinâmica.",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000 --static ./public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {}
+}

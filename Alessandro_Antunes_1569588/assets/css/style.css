@@ -336,4 +336,73 @@ footer article {
     line-height: 1.6;
 }
 
-/* MEDIA QUERIES ... */
+body {
+    background-color: #343a40; /* Azul bem escuro */
+    color: #ffffff;            /* Texto branco */
+  }
+  
+  .nav-link {
+    color: #ffffff;            /* Links em branco */
+  }
+  
+  .nav-link.active {
+    color: #d2b48c;            /* Cor de destaque (bege ou cor suave) */
+  }
+  
+  .btn-primary {
+    background-color: #ffffff; /* Botões brancos */
+    border: none;
+    color: #343a40;            /* Texto em azul escuro */
+  }
+  
+  .btn-outline-primary {
+    border-color: #ffffff;    /* Bordas brancas */
+    color: #ffffff;            /* Texto branco */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #343a40; /* Fundo azul escuro ao passar o mouse */
+    color: white;
+  }
+  
+  img {
+    object-fit: cover;         /* Ajuste da imagem */
+  }
+
+  
+
+  .navbar-brand img {
+      width: 8rem;
+      height: auto;
+  }
+  .navbar-brand img:hover {
+      width: 9rem;
+      height: auto;
+      transition: 1s;
+      
+  }
+  .nav-item {
+      font-size: 30px;
+      padding: 20px;
+      border-radius: 20%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+  }
+  .nav-item:hover {
+      font-size: 35px;
+      transition: 1.0s;
+      color: rgb(255, 255, 255);
+    }
+  
+  .d-flex {
+    position: relative;
+    left :25%
+  }
+  .navbar-brand {
+    font-size: 35px;
+  }
+  .navbar-brand:hover a {
+    color:#000000;
+    transition: 1s;
+  }
+  

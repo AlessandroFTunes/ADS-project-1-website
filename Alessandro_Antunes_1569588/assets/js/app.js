@@ -72,6 +72,14 @@ function buscarNoticias() {
         fonte: "BH Trans"
       }
     ];
+
+    const login = [
+          {
+            id: "1",
+            email: "escreva teu email",
+            senha: "escreva tua senha"
+          }             
+    ]
     
     
   
