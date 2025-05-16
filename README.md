@@ -35,23 +35,30 @@
 ## Estrutura do Projeto
 
 LêNoticias/
+
 ├── assets/
+
 │   ├── css/
 │   │   ├── login.css          # Estilo da página de login
 │   │   └── style.css          # Estilos gerais do site
+
 │   ├── img/                   # Imagens usadas no site (logo, ilustrações, etc.)
+
 │   └── js/                    # Scripts JavaScript do projeto (se houver)
+
 │
 ├── cadastro.html              # Página de cadastro de usuário
 ├── index.html                 # Página principal com carrossel e notícias
 ├── login.html                 # Página de login
 ├── noticias.html              # Página com os detalhes de uma notícia
+
 │
 ├── db/                        # Pasta do backend fake (JSON Server)
 │   ├── db.json                # Base de dados em JSON simulada
 │   ├── package.json           # Configurações e dependências do projeto
 │   ├── package-lock.json      # Arquivo de bloqueio de dependências
 │   └── node_modules/          # Dependências instaladas (gerado automaticamente)
+
 │
 └── README.md                  # Documentação do projeto
 
