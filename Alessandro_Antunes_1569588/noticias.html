@@ -8,7 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
    <!-- Ícones de redes sociais (Bootstrap Icons) -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<script >
+
+  <!--<script >
   // Verifica se o usuário está logado
   function verificar() {
     const usuario = sessionStorage.getItem("usuario");
@@ -16,7 +17,7 @@
     if (!usuario) {
       window.location.href = "login.html";
     }
-  }
+  } 
 
   // Chama a função verificar ao carregar a página
   window.onload = function() {
@@ -24,7 +25,7 @@
   };
  verificar(); 
 
-  </script>
+  </script> -->
   <head>
     <style>
       * {
@@ -344,32 +345,35 @@ footer p {
   </html>
   
   <script src="assets/js/app.js"></script>
- <script>
-  verificar(); // <-- Chame a função aqui!
+<script>
+  
+  async function loadNoticia() {
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
 
-  const params = new URLSearchParams(location.search);
-  const id = params.get("id");
+    try {
+      const response = await fetch(`http://localhost:3000/noticias/${id}`);
+      if (!response.ok) {
+        throw new Error('Notícia não encontrada');
+      }
+      const noticia = await response.json();
 
-  const noticia = noticias.find(n => n.id === id);
-
-  if (noticia) {
-    document.getElementById("titulo").innerText = noticia.titulo;
-    document.getElementById("conteudo").innerText = noticia.conteudo;
-    document.getElementById("autor").innerText = noticia.autor;
-    document.getElementById("fonte").innerText = noticia.fonte;
-    document.getElementById("imagem").src = noticia.imagem;
-    
-  } else {
-    document.getElementById("titulo").innerText = "Notícia não encontrada";
-    document.getElementById("conteudo").innerText = "A notícia solicitada não está disponível.";
-    document.getElementById("imagem").style.display = "none";
+      document.getElementById("titulo").innerText = noticia.titulo;
+      document.getElementById("conteudo").innerText = noticia.conteudo;
+      document.getElementById("autor").innerText = noticia.autor;
+      document.getElementById("fonte").innerText = noticia.fonte;
+      document.getElementById("imagem").src = noticia.imagem;
+      
+    } catch (error) {
+      console.error('Erro:', error);
+      document.getElementById("titulo").innerText = "Notícia não encontrada";
+      document.getElementById("conteudo").innerText = "A notícia solicitada não está disponível.";
+      document.getElementById("imagem").style.display = "none";
+    }
   }
 
-  function redirecionarBusca() {
-    const termo = document.getElementById('campoBusca').value;
-    window.location.href = `index.html?busca=${encodeURIComponent(termo)}`;
-  }
-
+  // Load the news when page loads
+  loadNoticia();
 </script>
 </body>
 </html>

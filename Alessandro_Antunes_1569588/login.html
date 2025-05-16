@@ -126,7 +126,7 @@
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
     </div>
-    <a href="cadastro.html" > não possuo um login</a>
+    <a href="cadastro.html?id=1" > não possuo um login</a>
     <button type="submit" class="btn1 btn-primary">Entrar</button>
     </form>
 
@@ -135,5 +135,25 @@
  <!-- JS Personalizado -->
  <script src="Alessandro_Antunes_1569588/assets/js/app.js" defer></script>
  <script src="assets/js/verificadores.js" defer></script>
+ <script>
+    async function loadNoticia() {
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    try {
+      const response = await fetch(`http://localhost:3000/login/${id}`);
+      if (!response.ok) {
+        throw new Error('Notícia não encontrada');
+      }
+      const noticia = await response.json();
+
+      document.getElementById("titulo").innerText = noticia.email;
+      document.getElementById("conteudo").innerText = noticia.senha;
+      
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  }
+ </script>
 </body>
 </html>

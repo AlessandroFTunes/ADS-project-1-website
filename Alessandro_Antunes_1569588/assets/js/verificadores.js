@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 fetch('/db/db.json')
   .then(response => response.json())
   .then(data => {
@@ -36,3 +38,16 @@ fetch('/db/db.json')
     sessionStorage.setItem("usuario", JSON.stringify(usuarios));
 
     windows.alert("Usuário criado com sucesso!");}
+
+
+    function CriarPonto(){
+      var usuario = nome;
+      var horas_extras= document.getElementById("horas_extras").value;
+      const button = document.getElementById("button");
+      button.addEventListener("click", function Cronometro () {
+         
+        const horas_trabalhadas = moment().format("D, MMM Do 	YY, h:mm:ss a");
+
+
+    
+      })}

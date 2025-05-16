@@ -16,6 +16,30 @@
  <!-- CSS Personalizado -->
  <link rel="stylesheet" href="assets/css/style.css" />
  <link rel="stylesheet" href="assets/css/login.css">
+ <script>  async function loadNoticia() {
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    try {
+      const response = await fetch(`http://localhost:3000/login/${1}`);
+      if (!response.ok) {
+        throw new Error('Login não encontrado');
+      }
+      const noticia = await response.json();
+
+      document.getElementById("email").innerText = login.email;
+      document.getElementById("senha").innerText = login.senha;
+      document.getElementById("nome").innerText = login.nome;
+      
+    } catch (error) {
+      console.error('Erro:', error);
+      document.getElementById("titulo").innerText = "Erro";
+      document.getElementById("conteudo").innerText = "erro";
+      document.getElementById("imagem").style.display = "erro";
+    }
+  }
+  loadNoticia();
+  </script>
     
     <style>
     body {
@@ -135,5 +159,6 @@
  <!-- JS Personalizado -->
  <script src="Alessandro_Antunes_1569588/assets/js/app.js" defer></script>
  <script src="assets/js/verificadores.js" defer></script>
+ 
 </body>
 </html>
