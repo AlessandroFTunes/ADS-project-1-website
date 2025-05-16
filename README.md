@@ -26,6 +26,10 @@
 
 ### 5. **Redes Sociais**
    - Ícones de redes sociais são incluídos no rodapé, permitindo aos usuários acompanhar o projeto nas principais plataformas sociais (Instagram, Facebook, YouTube, Twitter e TikTok).
+### 6. **json server**
+   - backend em node.js e json server.
+   ![alt text](Alessandro_Antunes_1569588/assets/img/print.png)
+   ![alt text](Alessandro_Antunes_1569588/assets/img/print1.png)
 
 ## Estrutura do Projeto
 
