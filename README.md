@@ -6,7 +6,8 @@
 
 - **HTML**: Estruturação das páginas web.
 - **CSS**: Estilização do layout e design visual, incluindo o uso de propriedades avançadas e personalizadas.
-- **JavaScript**: Funcionalidades interativas, como busca de notícias e manipulação dinâmica de conteúdo.
+- **JavaScript**: Funcionalidades interativas, como busca de notícias.
+- **Node.js e Json Server** : Para guardar informações e manipular dinâmica de conteúdo.
 - **Bootstrap 5**: Framework para design responsivo e componentes interativos como carrosséis e formulários.
 - **Bootstrap Icons**: Ícones para redes sociais e outros componentes de interface.
 
