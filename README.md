@@ -15,15 +15,19 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 <<  COLOQUE A IMAGEM GET AQUI >>
 
-<<  COLOQUE A IMAGEM POST AQUI >>
+![image](https://github.com/user-attachments/assets/ecfdb5fb-927a-463c-89ad-df2abefdab5b)
+
 
 <<  COLOQUE A IMAGEM PUT AQUI >>
 
-<<  COLOQUE A IMAGEM DELETE AQUI >>
+![image](https://github.com/user-attachments/assets/438ef0ec-a14d-4cb1-85c0-ac3a8411e742)
+
 
 **Print da aba NETWORK com requisições Fetch/XHR de POST**
 
-<<  COLOQUE A IMAGEM AQUI >>
+![image](https://github.com/user-attachments/assets/be392c87-c65e-44c9-ad53-defb87e2a7a5)
+
+![image](https://github.com/user-attachments/assets/6c9b3eba-6475-4cc3-adcc-a3f6385a19e1)
 
 ## **Orientações Gerais**
 
