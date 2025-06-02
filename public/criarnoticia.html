@@ -15,7 +15,45 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+
+<style>
+    /* Estilos personalizados */
+
+    #calendar {
+      width: 100%;
+      max-width: 900px;
+      height: 80vh;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      
+    }
+  </style>
+
+   <script src="assets/scripts/noticias.js">
+   carregarNoticias();
+    function carregarNoticias(calendar) {
+fetch('http://localhost:3000/noticias')
+.then(response => response.json())
+.then(noticias => {
+noticias.forEach(noticia => {
+calendar.addEvent({
+title: noticias.titulo,
+start: noticias.data,
+description: noticias.conteudo,
+});
+});
+})
+.catch(error => {
+console.error('Erro ao carregar notícias:', error);
+alert('Erro ao carregar notícias. Verifique o console para detalhes.');
+});
+}
+
+</script>
 </head>
+<div id='calendar'  class="position-relative " ></div>
+
 <div class="container mt-4">
     <!-- Tabela de Notícias -->
     <div class="card shadow-sm mb-4">
@@ -36,12 +74,14 @@
                         </tr>
                     </thead>
                     <tbody id="corpoTabelaNoticias">
-                        <script src="assets/scripts/noticias.js">carregarNoticias()</script>
+                       
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+    
 
     <!-- Formulário para Adicionar Notícia -->
     <div class="card shadow-sm">
@@ -87,30 +127,69 @@
     </div>
 </div>
     
-    <!-- Novo script para notícias -->
-    <script>
-        // Simulação de dados - substitua por fetch ao seu JSON-Server
-        document.getElementById('formNoticia').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            //POST para sua API
-            fetch('http://localhost:3000/noticias', {
-                method: 'POST',
-                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-
-                    titulo: document.querySelector('#formNoticia input[type="text"]').value,
-                    conteudo: document.querySelector('#formNoticia textarea').value,
-                    data: document.querySelector('#formNoticia input[type="date"]').value,
-                    autor: document.getElementById('Autor').value,
-                    fonte:document.getElementById('Fonte').value,
-                    imagem: document.getElementById('imagemNoticia').value
-                })
-         })
-            
-            alert('Notícia adicionada com sucesso! (simulação)');
-            this.reset();
-        });
-    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("formNoticia");
+      const calendarEl = document.getElementById("calendar");
+  
+      // Inicializa o calendário
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: "pt-br",
+        themeSystem: "bootstrap",
+        initialView: "dayGridMonth",
+        
+      });
+  
+      calendar.render();
+  
+      // Manipula o envio do formulário
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        // Captura os dados do formulário
+        const titulo = form.querySelector('input[type="text"]').value;
+        const conteudo = form.querySelector("textarea").value;
+        const data = form.querySelector('input[type="date"]').value;
+        const autor = document.getElementById("Autor").value;
+        const fonte = document.getElementById("Fonte").value;
+        const imagem = document.getElementById("imagemNoticia").value;
+  
+        // Envia os dados para a API (JSON-Server)
+        fetch("http://localhost:3000/noticias", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            titulo,
+            conteudo,
+            data,
+            autor,
+            fonte,
+            imagem,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Erro ao adicionar notícia.");
+            }
+            return response.json();
+          })
+          .then((noticia) => {
+            // Adiciona o evento no calendário
+            calendar.addEvent({
+              title: noticias.titulo,
+              start: noticias.data,
+              description: noticias.conteudo,
+            });
+  
+            alert("Notícia adicionada com sucesso!");
+            form.reset();
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("Erro ao adicionar notícia.");
+          });
+      });
+    });
+  </script>
 </body>
 </html>

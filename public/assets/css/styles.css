@@ -239,6 +239,15 @@
       background-color: var(--accent-color);
       border-color: var(--accent-color);
     }
+    :root {
+      --fc-daygrid-event-dot-width: 80px;
+    }
+   #calendar a{
+color: burlywood;
+    } 
+    #calendar p{
+      color: burlywood;
+          } 
     
     /* Responsividade */
     @media (max-width: 768px) {
